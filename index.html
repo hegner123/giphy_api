@@ -13,9 +13,16 @@
 <body>
   <div class="container">
     <div class="row mt-5">
-      <button class="btn gif-button gif-button-one ml-2">topic1</button>
-      <button class="btn gif-button gif-button-two ml-2">topic2</button>
-      <button class="btn gif-button gif-button-three ml-2">topic3</button>
+      <div class="col col-12">
+        <input type="text" class="user-input-text" id="user-input" >
+        <button id="add-button" class="btn user-button ml-3">Add Button</button>
+
+      </div>
+    </div>
+    <div class="row mt-5 button-div">
+      <button class="btn gif-button gif-button-one ml-2" data-topic="panda">Panda</button>
+      <button class="btn gif-button gif-button-two ml-2" data-topic="horse">Horse</button>
+      <button class="btn gif-button gif-button-three ml-2" data-topic="cat">Cat</button>
     </div>
 
     <div class="row display">
