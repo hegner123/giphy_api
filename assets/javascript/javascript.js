@@ -1,31 +1,48 @@
 // api key uAqq2e9vPXAPuNoT7BAQMESLv2UA1RYd
 $(document).ready(function (){
-  
-clickStuff();
+
+  var topics = ['HORSE', 'CAT', 'DOG']
+
+  function makeButtons(){
+    for (i=0;i<topics.length;i++) {
+      var newButton = $('<button class="btn gif-button ml-2" data-topic="">')
+      newButton.attr("data-topic", topics[i] );
+      newButton.text(topics[i]);
+      newButton.appendTo(".button-div");
+      setClick();
+    }
+  }
 
   $('#add-button').on('click', function (){
     var userInput = $("#user-input").val()
+    
     console.log(userInput);
-    var newButton = $('<button class="btn gif-button ml-2" data-topic="">')
-    newButton.attr("data-topic", userInput );
-    newButton.text(userInput);
-    newButton.appendTo(".button-div");
-    clickStuff();
+    topics.push(userInput);
     $(".user-input-text").val("");
+    $(".button-div").empty();
+    makeButtons();
   });
 
   
 
-  function clickStuff(){
+makeButtons();
+setClick();
+
+
+  
+  
+
+  function setClick(){
     $('.gif-button').click(function (){
-      console.log("this");
       var searchTerm = $(this).attr("data-topic");
-      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + searchTerm + '&api_key=uAqq2e9vPXAPuNoT7BAQMESLv2UA1RYd';
+      // var queryURL = 'https://api.giphy.com/v1/gifs/search?&api_key=uAqq2e9vPXAPuNoT7BAQMESLv2UA1RYdq='+ searchTerm;
+      var queryURL = 'https://api.giphy.com/v1/gifs/search?api_key=uAqq2e9vPXAPuNoT7BAQMESLv2UA1RYd&q=' + searchTerm;
       $.ajax ({
         url:queryURL,
         method: 'GET',
       })
         .then(function(response){
+          console.log(response);
           var results = response.data;
           $('.display').empty();
           for (i=0;i<20;i++){
