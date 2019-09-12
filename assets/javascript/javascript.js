@@ -46,7 +46,7 @@ setClick();
           var results = response.data;
           $('.display').empty();
           for (i=0;i<20;i++){
-            var imageDiv = $('<div class="ml-3">')
+            var imageDiv = $('<div class="m-3">')
             var imageImg = $('<img class="gif-img gif-img-' + [i] + ' " src="">')
             imageImg.attr("src", results[i].images.fixed_height.url)
             imageImg.css('animation-play-state', 'paused')

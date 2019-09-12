@@ -9,3 +9,12 @@ body {
 .user-button {
   background: white;
 }
+
+.display {
+  background: black;
+}
+
+.space {
+  padding:2rem;
+  height:100px;
+}
