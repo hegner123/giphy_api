@@ -20,20 +20,22 @@
       <div class="col col-12">
         <label class="label-text" for="user-input-text">Gif Content:</label>
         <input type="text" class="user-input-text" id="user-input-text">
-        <label class="label-text" for="quantity">Number of Gifs</label>
-        <input type="number" name="quantity" min="1" max="25" value="25" class="user-input-number" id="user-input-number">
-        <label class="label-text" for="rating">Rating</label>
-        <select id="user-rating-select"name="rating">
-            <option value="G">G</option>
-            <option value="PG">PG</option>
-            <option value="PG-13">PG-13</option>
-            <option value="R">R</option>
-          </select>
+       
         
         <button id="add-button"class="btn user-button ml-3">Add Button</button>
       </div>
     </div>
-    <div class="row mt-5 button-div m-3"></div>
+    <div class="row mt-5 button-div m-3">
+      <label class="label-text ml-2" for="quantity">Number of Gifs</label>
+      <input type="number" name="quantity" min="1" max="25" value="25" class="user-input-number ml-2" id="user-input-number">
+      <label class="label-text ml-2" for="rating">Rating</label>
+      <select id="user-rating-select"name="rating" class="ml-2">
+          <option value="G">G</option>
+          <option value="PG">PG</option>
+          <option value="PG-13">PG-13</option>
+          <option value="R">R</option>
+        </select>
+    </div>
     <div class="row display"></div>
   </div>
 </body>
