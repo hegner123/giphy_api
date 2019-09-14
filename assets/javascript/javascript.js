@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   function addButton() {
     $('#add-button').on('click', function () {
-      var userInput = $("#user-input").val()
+      var userInput = $("#user-input-text").val()
       console.log(userInput);
       topics.push(userInput);
       $(".user-input-text").val("");
