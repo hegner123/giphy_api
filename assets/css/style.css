@@ -25,13 +25,14 @@ body {
 }
 
 .error-text {
-  font-size:100px;
+  font-size:50px;
   color:red;
   padding:50px;
   background:white;
 }
 
-.rating {
+.rating-text {
   color:white;
-  font-size:20px;
+  
 }
+
