@@ -20,11 +20,21 @@ $(document).ready(function () {
   function addButton() {
     $('#add-button').on('click', function () {
       var userInput = $("#user-input-text").val()
-      console.log(userInput);
-      topics.push(userInput);
-      $(".user-input-text").val("");
-      $(".button-div").empty();
-      makeButtons();
+      if (!userInput) {
+        $('.display').empty();
+        var newDiv = $("<div>");
+        newDiv.addClass("error-text");
+        newDiv.text("No Search Paramater, please enter a value and try again.");
+        newDiv.appendTo(".display");
+      }else {
+        $(".error-text").empty();
+        console.log(userInput);
+        topics.push(userInput);
+        $(".user-input-text").val("");
+        $(".button-div").empty();
+        makeButtons();
+      }
+      
     });
   };
 
@@ -60,16 +70,19 @@ $(document).ready(function () {
         })
         .then(function (response) {
           var results = response.data;
+          console.log(response);
           
           $('.display').empty();
           for (i = 0; i < searchLimit; i++) {
             var imageImg = $('<img class="gif-img m-3">');
-            var ratingText = $("<p>")
+            var ratingText = $('<p class="rating">')
             imageImg.attr("src", results[i].images.fixed_height_still.url);
             imageImg.attr("still_img", results[i].images.fixed_height_still.url);
             imageImg.attr("moving_img", results[i].images.fixed_height.url);
-            ratingText.text(results[i].ratingText);
+            ratingText.text("Words");
             imageImg.appendTo('.display');
+            ratingText.appendTo(".gif-img");
+            console.log(ratingText);
             
           };
           playPause();
