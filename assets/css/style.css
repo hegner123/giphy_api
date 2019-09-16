@@ -1,18 +1,28 @@
 body {
-  background:#777777;
+  background-image: url(../images/folk-pattern.png)
 }
 
 .gif-button {
   background:white;
+  color: black;
+  border: solid 1px black;
 }
 
 .user-button {
   background: white;
+  color: black;
+  border: solid 1px black;
 }
 
 .display {
-  background: black;
+  background-image: url(../images/folk-pattern-black.png);
 }
+
+.heading {
+  background:whitesmoke;
+  opacity: 0.9;
+}
+
 
 .space {
   padding:2rem;
@@ -20,8 +30,7 @@ body {
 }
 
 .label-text {
-  color:white;
-  
+  color:black;
 }
 
 .error-text {
