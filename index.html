@@ -16,27 +16,32 @@
 
 <body>
   <div class="container">
-    <div class="row mt-5">
-      <div class="col col-12 heading">
-        <label class="label-text " for="user-input-text">Gif Content:</label>
-        <input type="text" class="user-input-text form-control col-3" id="user-input-text">
-        <button id="add-button"class="btn user-button ml-3">Add Button</button>
+    <div class="row mt-5 p-2 heading">
+      <div class="col">
+        <h1 class="text-center">A Giphy API</h1>
+        <p class="text-center">Click a button for Gifs. Filter results by rating. Filter results by quantity.</p>
+      </div>
+      <div class="col col-12">
+        
+        <label class="label-text d-inline " for="user-input-text">Gif Content:</label>
+        <input type="text" class="user-input-text form-control col-3 d-inline" id="user-input-text" placeholder="Search">
+        <button id="add-button"class="btn user-button ml-3 d-inline ">Add Button</button>
       </div>
     </div>
-    <div class="row mt-5 m-3">
+    <div class="row mt-5 p-2 heading">
       <div class="col col-12">
-          <div class="col">
-            <label class="label-text ml-2" for="quantity">Number of Gifs</label>
-              <input type="number" name="quantity" min="1" max="25" value="25" class="user-input-number ml-2 form-control col-1" id="user-input-number">
-              <label class="label-text ml-2" for="rating">Rating</label>
-            <select id="user-rating-select"name="rating" class="ml-2 form-control col-1">
+          <div>
+            <label class="label-text d-inline" for="quantity">Number of Gifs</label>
+              <input type="number" name="quantity" min="1" max="25" value="25" class="user-input-number ml-2 form-control col-1 d-inline" id="user-input-number">
+              <label class="label-text ml-2 d-inline" for="rating">Rating</label>
+            <select id="user-rating-select"name="rating" class="ml-2 form-control col-1 d-inline user-rating-select">
               <option value="G">G</option>
               <option value="PG">PG</option>
               <option value="PG-13">PG-13</option>
               <option value="R">R</option>
             </select>
           </div>
-        <div class="button-div"></div>
+        <div class="button-div mt-5"></div>
       </div>
   </div>
     <div class="row display"></div>

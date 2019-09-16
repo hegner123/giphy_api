@@ -1,7 +1,7 @@
 // api key uAqq2e9vPXAPuNoT7BAQMESLv2UA1RYd
 $(document).ready(function () {
 
-  var topics = ['HORSE', 'CAT', 'DOG']
+  var topics = ['GUITAR', 'DRUMS', 'SINGING']
 
   makeButtons();
   addButton();

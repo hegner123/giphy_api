@@ -14,6 +14,18 @@ body {
   border: solid 1px black;
 }
 
+.user-input-text {
+  border: solid 1px black;
+}
+
+.user-input-number{
+  border: solid 1px black;
+}
+
+.user-rating-select {
+  border: solid 1px black;
+}
+
 .display {
   background-image: url(../images/folk-pattern-black.png);
 }
