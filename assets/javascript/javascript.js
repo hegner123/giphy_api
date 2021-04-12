@@ -27,8 +27,8 @@ $(document).ready(function () {
         newDiv.appendTo(".display");
       } else {
         $(".error-text").empty();
-        console.log(userInput);
-        topics.push(userInput);
+        // console.log(userInput);
+        // topics.push(userInput);
         $(".user-input-text").val("");
         $(".button-div").empty();
         makeButtons();
@@ -38,17 +38,17 @@ $(document).ready(function () {
 
   function playPause() {
     $(".gif-img").on("click", function () {
-      console.log($(this).attr("src"));
-      console.log("click works");
+      // console.log($(this).attr("src"));
+      // console.log("click works");
       let movingIMG = $(this).attr("moving_img");
       let stillIMG = $(this).attr("still_img");
       let currentImg = $(this).attr("src");
       if (currentImg.endsWith("s.gif")) {
         $(this).attr("src", "" + movingIMG);
-        console.log("movingIMG");
+        // console.log("movingIMG");
       } else {
         $(this).attr("src", "" + stillIMG);
-        console.log("stillIMG");
+        // console.log("stillIMG");
       };
     });
   };
@@ -66,7 +66,7 @@ $(document).ready(function () {
         })
         .then(function (response) {
           let results = response.data;
-          console.log(response);
+          // console.log(response);
           $('.display').empty();
           for (i = 0; i < searchLimit; i++) {
             let imageDiv = $('<div class="gif-div col text-center image-div mx-1">');
